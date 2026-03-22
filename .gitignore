@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Environment variables
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model files (VERY IMPORTANT - large files)
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+
+# Dataset folders (do NOT upload datasets)
+data/
+dataset/
+datasets/
+
+# Uploaded images
+static/uploads/
+uploads/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Cache
+.cache/
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Streamlit cache (if used)
+.streamlit/
+
+# Flask session files
+instance/
+
+# Demo video (if large)
+*.mp4
+
+# Misc
+*.sqlite3
