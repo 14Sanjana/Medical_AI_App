@@ -1,0 +1,16 @@
+Flask
+
+numpy
+pandas
+
+opencv-python
+
+
+scikit-learn
+tensorflow
+keras
+
+groq
+
+
+
