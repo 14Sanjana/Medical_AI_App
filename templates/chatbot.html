@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .chat-container {
+            height: 350px;
+            overflow-y: auto;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 20px;
+            max-width: 70%;
+        }
+
+        .user {
+            background-color: #00bcd4;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .bot {
+            background-color: #e0e0e0;
+            color: black;
+            margin-right: auto;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        .chat-input button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #00bcd4;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-login">
+
+<div class="container">
+
+    <h2>Medical Assessment</h2>
+    <p><strong>Condition:</strong> {{ result }}</p>
+    <p><strong>Confidence:</strong> {{ confidence }}%</p>
+    <p><strong>Severity:</strong> {{ severity }}</p>
+
+    <hr>
+    <h3>Chat with Doctor</h3>
+
+    <div class="chat-container">
+
+        {% for chat in chat_history %}
+            {% if chat.role == 'user' %}
+                <div class="message user">
+                    {{ chat.message }}
+                </div>
+            {% else %}
+                <div class="message bot">
+                    {{ chat.message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+
+    <form method="POST" action="/chatbot-response" class="chat-input">
+        <input type="text" name="user_question" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('select') }}">
+        <button>Back to Selection</button>
+    </a>
+
+    <form action="/clear_chat">
+        <button type="submit">Clear Chat</button>
+    </form>
+
+
+</div>
+
+</body>
+</html>

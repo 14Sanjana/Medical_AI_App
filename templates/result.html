@@ -1,0 +1,42 @@
+<div class="medical-container">
+
+    <div class="medical-header">
+        <h2>Medical Assessment Report</h2>
+        <p>AI Assisted Preliminary Evaluation</p>
+    </div>
+
+    <div class="medical-card">
+
+        <div class="row">
+            <label>Condition Identified</label>
+            <div class="value">{{ condition_name }}</div>
+        </div>
+
+        <div class="row">
+            <label>Confidence Level</label>
+            <div class="value">{{ confidence }}%</div>
+        </div>
+
+        <div class="row">
+            <label>Severity</label>
+            <div class="badge {{ severity_class }}">
+                {{ severity }}
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Recommended Guidance</label>
+            <div class="value">
+                {{ recommendation }}
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            ⚠ This AI assessment is not a confirmed medical diagnosis.
+            Please consult a licensed medical professional.
+        </div>
+
+        <button class="consult-btn">Consult Doctor</button>
+
+    </div>
+</div>

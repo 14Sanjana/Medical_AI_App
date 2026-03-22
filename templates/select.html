@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Diagnosis Type</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="bg-login">
+
+<div class="container">
+    <h2>Select Diagnosis Category</h2>
+
+    <a href="{{ url_for('upload_skin') }}">
+        <button>Skin Analysis</button>
+    </a>
+
+    <br><br>
+
+    <a href="{{ url_for('upload_xray') }}">
+        <button>X-Ray Analysis</button>
+    </a>
+</div>
+
+</body>
+</html>
