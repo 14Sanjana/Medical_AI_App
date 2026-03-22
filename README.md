@@ -140,7 +140,7 @@ The system is designed to improve **accessible, real-time healthcare assistance*
 </p>
 
 <p align="center">
-  <i>(Replace with your demo video link)</i>
+  <i>(https://drive.google.com/file/d/1kHXQnlqE6yvWncDme8WfQ3W2a2lPeKcP/view?usp=sharing)</i>
 </p>
 
 ---
